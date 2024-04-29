@@ -29,15 +29,15 @@ def text_to_speech(user_text):
     engine.runAndWait()
 
 
-haarcasecade_path = "C:\\Users\\patel\\OneDrive\\Documents\\E\\FBAS\\haarcascade_frontalface_default.xml"
+haarcasecade_path = "haarcascade_frontalface_default.xml"
 trainimagelabel_path = (
-    "C:\\Users\\patel\\OneDrive\\Documents\\E\\FBAS\\TrainingImageLabel\\Trainner.yml"
+    "TrainingImageLabel/Trainner.yml"
 )
-trainimage_path = "C:\\Users\\patel\\OneDrive\\Documents\\E\\FBAS\\TrainingImage"
+trainimage_path = "TrainingImage"
 studentdetail_path = (
-    "C:\\Users\\patel\\OneDrive\\Documents\\E\\FBAS\\StudentDetails\\studentdetails.csv"
+    "StudentDetails/studentdetails.csv"
 )
-attendance_path = "C:\\Users\\patel\\OneDrive\\Documents\\E\\FBAS\\Attendance"
+attendance_path = "Attendance"
 
 
 window = Tk()
@@ -90,7 +90,7 @@ def testVal(inStr, acttyp):
 
 
 logo = Image.open("UI_Image/0001.png")
-logo = logo.resize((50, 47), Image.ANTIALIAS)
+logo = logo.resize((50, 47), Image.Resampling.LANCZOS)
 logo1 = ImageTk.PhotoImage(logo)
 titl = tk.Label(window, bg="black", relief=RIDGE, bd=10, font=("arial", 35))
 titl.pack(fill=X)
